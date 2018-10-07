@@ -1,7 +1,7 @@
 {
-  "name": "fucking-simple-chat",
+  "name": "nuxt-typescript-template",
   "version": "1.0.0",
-  "description": "My cat&#39;s pajamas Nuxt.js project",
+  "description": "Nuxt.js and TypeScript.",
   "author": "dyoshikawa",
   "private": true,
   "scripts": {
@@ -9,24 +9,28 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "format": "prettier --write **/*.{js,ts,vue}",
+    "json-server": "json-server --port 8080 --watch events.json"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "bootstrap-vue": "^2.0.0-beta",
+    "@nuxtjs/axios": "^5.0.0",
     "bootstrap": "^4.1.3",
-    "@nuxtjs/axios": "^5.0.0"
+    "bootstrap-vue": "^2.0.0-beta",
+    "cross-env": "^5.2.0",
+    "moment": "^2.22.2",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^1.2.0",
+    "socket.io-client": "^2.1.1",
+    "vuex-class": "^0.3.1"
   },
   "devDependencies": {
+    "json-server": "^0.14.0",
     "nodemon": "^1.11.0",
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-prettier": "2.6.2",
-    "prettier": "1.14.3"
+    "prettier": "^1.14.3",
+    "ts-loader": "^5.2.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.1.1"
   }
 }

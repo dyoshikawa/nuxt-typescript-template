@@ -1,0 +1,26 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "no-namespace": false,
+    "no-string-literal": false,
+    "no-empty-interface": false,
+    "max-line-length": {
+      "options": { "limit": 120 },
+      "severity": "warn"
+    },
+    "interface-name": [true, "never-prefix"],
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "semi": false,
+        "trailingComma": "es5"
+      }
+    ]
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}
