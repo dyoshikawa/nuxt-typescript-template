@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex, { StoreOptions } from 'vuex'
 import { RootState } from '~/store/types'
-import { events } from './events/index'
+import { events } from '~/store/events/index'
 
 Vue.use(Vuex)
 
