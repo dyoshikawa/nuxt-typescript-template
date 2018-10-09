@@ -11,7 +11,7 @@
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": false,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"]
