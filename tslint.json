@@ -6,6 +6,7 @@
     "no-namespace": false,
     "no-string-literal": false,
     "no-empty-interface": false,
+    "import-name": false,
     "max-line-length": {
       "options": {
         "limit": 120
@@ -13,7 +14,6 @@
       "severity": "warn"
     },
     "interface-name": [true, "never-prefix"],
-    "object-literal-sort-keys": false,
     "prettier": [
       true,
       {
