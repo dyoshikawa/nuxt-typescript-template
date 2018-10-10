@@ -8,7 +8,7 @@ export interface AuthUser {
   jwt: string
 }
 
-export const enum AuthState {
+export enum AuthState {
   IsLoading,
   IsLogin,
   IsNotLogin,
@@ -16,6 +16,7 @@ export const enum AuthState {
 
 export interface AuthUserState {
   authUser: AuthUser
+  isLogin: AuthState
 }
 
 export const state: AuthUserState = {
@@ -24,6 +25,7 @@ export const state: AuthUserState = {
     jwt: '',
     name: '',
   },
+  isLogin: AuthState.IsLoading,
 }
 
 const namespaced: boolean = true
@@ -56,7 +58,10 @@ export const actions: ActionTree<AuthUserState, RootState> = {
 }
 
 export const mutations: MutationTree<AuthUserState> = {
-  setEvents(state: AuthUserState, payload: AuthUser) {
+  setAuthUser(state: AuthUserState, payload: AuthUser) {
     state.authUser = payload
+  },
+  setIsLogin(state: AuthUserState, payload: AuthState) {
+    state.isLogin = payload
   },
 }
