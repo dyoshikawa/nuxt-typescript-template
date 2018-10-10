@@ -5,8 +5,8 @@ export default ({ $axios }) => {
   $axios.onRequest((config: AxiosRequestConfig) => {
     config.baseURL = apiUrl
     config.headers = {
-      'Content-Type': 'application/json',
       Accept: 'application/json',
+      'Content-Type': 'application/json',
     }
   })
 }

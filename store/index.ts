@@ -1,13 +1,16 @@
-import vue from 'vue'
-import vuex, { StoreOptions } from 'vuex'
-import { events } from '~/store/events/index'
-import { RootState } from '~/store/types'
+import Vue from 'vue'
+import Vuex, { StoreOptions } from 'vuex'
+import { authUser } from '~/store/authUser'
 
-vue.use(vuex)
+export interface RootState {
+  version: string
+}
+
+Vue.use(Vuex)
 
 const store: StoreOptions<RootState> = {
   modules: {
-    events,
+    authUser,
   },
   state: {
     version: '1.0.0', // a simple property
@@ -15,7 +18,7 @@ const store: StoreOptions<RootState> = {
 }
 
 const createStore = () => {
-  return new vuex.Store<RootState>(store)
+  return new Vuex.Store<RootState>(store)
 }
 
 export default createStore

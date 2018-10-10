@@ -1,11 +1,16 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended", "tslint-config-airbnb", "tslint-config-prettier"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
   "jsRules": {},
   "rules": {
     "no-namespace": false,
     "no-string-literal": false,
     "no-empty-interface": false,
+    "no-shadowed-variable": false,
     "import-name": false,
     "variable-name": false,
     "max-line-length": {
@@ -24,5 +29,8 @@
       }
     ]
   },
-  "rulesDirectory": ["tslint-plugin-prettier"]
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  }
 }
