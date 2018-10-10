@@ -7,6 +7,7 @@
     "no-string-literal": false,
     "no-empty-interface": false,
     "import-name": false,
+    "variable-name": false,
     "max-line-length": {
       "options": {
         "limit": 120
