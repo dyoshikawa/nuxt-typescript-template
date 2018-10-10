@@ -19,17 +19,17 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { Getter, Action } from 'vuex-class'
+import { Action, Getter } from 'vuex-class'
 
-@Component
+@Component({})
 export default class extends Vue {
-  @Getter('getEvents', { namespace: 'events' })
-  events: Event[]
-  @Action('fetchEvents', { namespace: 'events' })
-  fetchEvents: any
+  @Getter('getAuthUser', { namespace: 'authUser' })
+  private authUser: Event[]
+  @Action('fetchAuthUser', { namespace: 'authUser' })
+  private fetchAuthUser: any
 
-  async created() {
-    await this.fetchEvents()
+  private async created() {
+    await this.fetchAuthUser()
   }
 }
 </script>
