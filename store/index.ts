@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Vuex, { StoreOptions } from 'vuex'
-import { RootState } from '~/store/types'
+import vue from 'vue'
+import vuex, { StoreOptions } from 'vuex'
 import { events } from '~/store/events/index'
+import { RootState } from '~/store/types'
 
-Vue.use(Vuex)
+vue.use(vuex)
 
 const store: StoreOptions<RootState> = {
   modules: {
@@ -15,7 +15,7 @@ const store: StoreOptions<RootState> = {
 }
 
 const createStore = () => {
-  return new Vuex.Store<RootState>(store)
+  return new vuex.Store<RootState>(store)
 }
 
 export default createStore

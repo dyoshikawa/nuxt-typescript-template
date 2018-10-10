@@ -1,9 +1,9 @@
 import { Module } from 'vuex'
-import { getters } from './getters'
+import { RootState } from '../types'
 import { actions } from './actions'
+import { getters } from './getters'
 import { mutations } from './mutations'
 import { EventsState } from './types'
-import { RootState } from '../types'
 
 export const state: EventsState = {
   events: [],

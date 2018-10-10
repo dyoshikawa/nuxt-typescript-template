@@ -1,5 +1,5 @@
 import { MutationTree } from 'vuex'
-import { EventsState, Event } from './types'
+import { Event, EventsState } from './types'
 
 export const mutations: MutationTree<EventsState> = {
   setEvents(state, payload: Event[]) {

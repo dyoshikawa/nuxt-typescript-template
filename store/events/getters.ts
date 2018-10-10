@@ -1,6 +1,6 @@
 import { GetterTree } from 'vuex'
-import { EventsState, Event } from './types'
 import { RootState } from '../types'
+import { Event, EventsState } from './types'
 
 export const getters: GetterTree<EventsState, RootState> = {
   getEvents(state): Event[] {

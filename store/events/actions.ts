@@ -1,7 +1,7 @@
-import { ActionTree } from 'vuex'
-import { EventsState, Event } from './types'
-import { RootState } from '../types'
 import { AxiosResponse } from 'axios'
+import { ActionTree } from 'vuex'
+import { RootState } from '../types'
+import { Event, EventsState } from './types'
 
 export const actions: ActionTree<EventsState, RootState> = {
   async fetchEvents({ commit }): Promise<any> {

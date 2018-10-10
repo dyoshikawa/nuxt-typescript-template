@@ -16,5 +16,12 @@
     "paths": {
       "~/*": ["./*"]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "nuxt.config.js",
+    "modules",
+    "assets",
+    "static"
+  ]
 }
