@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios'
 import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
-import { RootState } from './index.d'
+import { RootState } from './index'
 
 export interface AuthUser {
   name: string
@@ -41,8 +41,8 @@ export const getters: GetterTree<AuthUserState, RootState> = {
 }
 
 export const actions: ActionTree<AuthUserState, RootState> = {
-  async fetchEvents({ commit }): Promise<any> {
-    const { data } = await this.$axios.get()
+  async fetchEvents({ commit }): Promise<void> {
+    const { data }: AxiosResponse<any> = await this.$axios.get()
     const payload: AuthUser = data.map((d: any) => {
       return {
         avatarUrl: d.photoURL,
@@ -51,7 +51,7 @@ export const actions: ActionTree<AuthUserState, RootState> = {
       }
     })
 
-    commit('setEvents', payload)
+    commit('setAuthUser', payload)
   },
 }
 
