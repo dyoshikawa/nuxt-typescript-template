@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "format": "prettier --write **/*.{js,ts,vue}",
     "lint": "tslint --project .",
-    "json-server": "json-server --port 8080 --watch events.json"
+    "json-server": "json-server --port 8080 --watch authUser.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "json-server": "^0.14.0",
     "nodemon": "^1.11.0",
+    "nuxt-typescript": "^0.11.0",
     "prettier": "^1.14.3",
     "ts-loader": "^5.2.1",
     "tslint": "^5.11.0",

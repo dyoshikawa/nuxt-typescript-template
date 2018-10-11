@@ -11,6 +11,8 @@
     "no-string-literal": false,
     "no-empty-interface": false,
     "no-shadowed-variable": false,
+    "no-angle-bracket-type-assertion": false,
+    "no-unused-expression": false,
     "import-name": false,
     "variable-name": false,
     "max-line-length": {

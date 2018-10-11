@@ -8,23 +8,20 @@
     </ul>
 
     <b-card
-      v-for="event in events"
-      :key="event.id"
-      :title="event.title"
-    >
-      {{ event.content }}
-    </b-card>
+      :title="authUser.name"
+    ></b-card>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { Action, Getter } from 'vuex-class'
+import { AuthUser } from '~/store/types/authUser'
 
 @Component({})
 export default class extends Vue {
   @Getter('getAuthUser', { namespace: 'authUser' })
-  private authUser: Event[]
+  private authUser: AuthUser
   @Action('fetchAuthUser', { namespace: 'authUser' })
   private fetchAuthUser: any
 

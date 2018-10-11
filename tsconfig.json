@@ -1,20 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "lib": ["dom", "es2015"],
-    "module": "es2015",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
+    "noUnusedLocals": false,
     "strictNullChecks": true,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     }
   },
   "exclude": [

@@ -1,23 +1,7 @@
 import { AxiosResponse } from 'axios'
 import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
+import { AuthState, AuthUser, AuthUserState } from '~/store/types/authUser'
 import { RootState } from './index'
-
-export interface AuthUser {
-  name: string
-  avatarUrl: string
-  jwt: string
-}
-
-export enum AuthState {
-  IsLoading,
-  IsLogin,
-  IsNotLogin,
-}
-
-export interface AuthUserState {
-  authUser: AuthUser
-  isLogin: AuthState
-}
 
 export const state: AuthUserState = {
   authUser: {
@@ -30,38 +14,39 @@ export const state: AuthUserState = {
 
 const namespaced: boolean = true
 
-export const authUser: Module<AuthUserState, RootState> = {
-  namespaced,
-  state,
-}
-
-export const getters: GetterTree<AuthUserState, RootState> = {
+const getters: GetterTree<AuthUserState, RootState> = {
   getAuthUser(state: AuthUserState): AuthUser {
     const { authUser } = state
     return authUser
   },
 }
 
-export const actions: ActionTree<AuthUserState, RootState> = {
-  async fetchEvents({ commit }): Promise<void> {
-    const { data }: AxiosResponse<any> = await this.$axios.get()
-    const payload: AuthUser = data.map((d: any) => {
-      return {
-        avatarUrl: d.photoURL,
-        jwt: d.qa,
-        name: d.name,
-      }
-    })
+const actions: ActionTree<AuthUserState, RootState> = {
+  async fetchAuthUser({ commit }): Promise<void> {
+    const { data }: AxiosResponse<any> = await this.$axios.get('/authUser')
+    const payload: AuthUser = {
+      avatarUrl: data.photoURL,
+      jwt: data.qa,
+      name: data.name,
+    }
 
     commit('setAuthUser', payload)
   },
 }
 
-export const mutations: MutationTree<AuthUserState> = {
+const mutations: MutationTree<AuthUserState> = {
   setAuthUser(state: AuthUserState, payload: AuthUser) {
     state.authUser = payload
   },
   setIsLogin(state: AuthUserState, payload: AuthState) {
     state.isLogin = payload
   },
+}
+
+export const authUser: Module<AuthUserState, RootState> = {
+  actions,
+  getters,
+  mutations,
+  namespaced,
+  state,
 }

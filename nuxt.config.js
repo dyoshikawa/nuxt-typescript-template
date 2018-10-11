@@ -57,7 +57,7 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '~/modules/typescript.js',
+    'nuxt-typescript',
   ],
   /*
    ** Axios module configuration
