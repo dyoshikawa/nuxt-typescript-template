@@ -13,8 +13,17 @@
     "no-shadowed-variable": false,
     "no-angle-bracket-type-assertion": false,
     "no-unused-expression": false,
+    "no-string-throw": false,
     "import-name": false,
     "variable-name": false,
+    "class-name": false,
+    "radix": false,
+    "callable-types": false,
+    "curly": false,
+    "no-eval": false,
+    "no-console": false,
+    "interface-over-type-literal": false,
+    "prefer-const": false,
     "max-line-length": {
       "options": {
         "limit": 120
@@ -33,6 +42,6 @@
   },
   "rulesDirectory": ["tslint-plugin-prettier"],
   "linterOptions": {
-    "exclude": ["node_modules/**"]
+    "exclude": ["node_modules"]
   }
 }
