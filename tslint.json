@@ -17,17 +17,6 @@
     "import-name": false,
     "variable-name": false,
     "class-name": false,
-    "radix": false,
-    "callable-types": false,
-    "curly": false,
-    "no-eval": false,
-    "no-console": false,
-    "no-boolean-literal-compare": false,
-    "interface-over-type-literal": false,
-    "use-isnan": false,
-    "triple-equals": false,
-    "prefer-const": false,
-    "prefer-template": false,
     "max-line-length": {
       "options": {
         "limit": 120
